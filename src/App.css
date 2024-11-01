@@ -1,38 +1,153 @@
+/* src/App.css */
+
+/* General styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
 .App {
   text-align: center;
+  max-width: 800px;
+  width: 90%;
+  margin: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Weather Dashboard styling */
+.weather-dashboard {
+  background: #ffffff;
+  color: #333333;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  font-size: 2em;
+  color: #2a5298;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* CitySearch styling */
+form {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 1em;
+  border: 2px solid #2a5298;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 1em;
+  background-color: #2a5298;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #1e3c72;
+}
+
+/* Current Weather styling */
+.current-weather {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f7f9fc;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.current-weather h2 {
+  color: #1e3c72;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.current-weather p {
+  margin: 5px 0;
+  font-size: 1.1em;
+}
+
+/* Temperature Toggle styling */
+.temperature-toggle {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 20px 0;
 }
 
-.App-link {
-  color: #61dafb;
+.temperature-toggle label {
+  font-size: 1.1em;
+  color: #333;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.temperature-toggle input[type="checkbox"] {
+  margin-right: 10px;
+  accent-color: #2a5298;
+}
+
+/* Weather Forecast styling */
+.weather-forecast {
+  margin-top: 20px;
+  background-color: #f7f9fc;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.weather-forecast h2 {
+  color: #1e3c72;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+.weather-forecast ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.weather-forecast li {
+  text-align: center;
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.weather-forecast li:hover {
+  background: rgba(42, 82, 152, 0.1);
+}
+
+.weather-forecast p {
+  font-size: 1em;
+}
+
+.weather-forecast p:first-child {
+  font-weight: bold;
 }
